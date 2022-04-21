@@ -1,0 +1,34 @@
+<div class="container">
+    <!-- <ul>
+    <li *ngFor="let obj of objects">{{obj.empId}} {{obj.name}} {{obj.salary}}</li>
+</ul> -->
+
+    <h3>displaying objects</h3>
+
+    <ul>
+        <!-- <li *ngFor="let obj of objects">
+        <div *ngIf="obj.empId && obj.name && obj.salary">
+            {{obj.empId}} , {{obj.name}} , {{obj.salary}}
+        </div>
+        <div *ngIf="obj.size && obj.type && obj.price">
+            {{obj.size}} , {{obj.type}} , {{obj.price}}
+        </div>
+    </li> -->
+    </ul>
+
+    <!-- <ul *ngFor="let obj of objects">
+        <li *ngFor="let v of obj|keyvalue">{{v.value}}</li>
+    </ul> -->
+
+    <ul>
+        <li *ngFor="let obj of objects">
+            <!-- <span *ngFor="let key of getKeys(obj)">{{obj[key]}}</span> -->
+            <span *ngFor="let value of getValue(obj)">{{value}}</span>
+        </li>
+    </ul>
+
+    <hr />
+    <!-- <tr *ngFor="let c of content">           
+    <td *ngFor="let key of c | keys">{{key}}: {{c[key]}}</td>
+  </tr> -->
+</div>

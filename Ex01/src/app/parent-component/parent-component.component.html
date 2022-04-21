@@ -1,0 +1,32 @@
+<div class="container mt-4">
+    <h3 class="mb-5 text-center">Employee Details</h3>
+
+    <form (submit)="addEmployee($event)">
+        EmpId :&nbsp;<input type="number" name="empId" id="">
+        Name :&nbsp;<input type="text" name="name" id="name">
+        Salary :&nbsp;<input type="number" name="salary" id=""><br /><br />
+
+        <div class="text-center">
+            <button class="btn btn-success text-center" type="submit">Add EMP</button>
+        </div>
+    </form>
+
+    <app-display-child [objects]="employees"></app-display-child>
+
+    <!-- <ul>
+        <li *ngFor="let emp of employees">{{emp.empId}}{{emp.name}}{{emp.salary}}</li>
+    </ul> -->
+
+    <h3 class="mb-5 text-center">Pizza Details</h3>
+
+    <form (submit)="addPizza($event)">
+        Size :&nbsp;<input type="number" name="size" id="">
+        Type :&nbsp;<input type="text" name="type" id="">
+        Price :&nbsp;<input type="number" name="price" id=""><br /><br />
+
+        <div class="text-center"><button class="btn btn-success" type="submit">Add</button></div>
+    </form>
+
+    <app-display-child [objects]="pizzas"></app-display-child>
+
+</div>

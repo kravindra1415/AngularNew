@@ -1,0 +1,8 @@
+<!-- <input type="text" name="" id="myname" (change)="save($event)" #namefield> -->
+<input type="text" name="" id="myname" value="hello" (change)="saveUsingEvent($event)" #namefield>
+<!-- <input type="text" name="" id="myname" value="hello" #namefield> -->
+<p>you entered {{namefield.value}}</p>
+<button (click)="saveUsingTemplateRef(namefield)">SaveUsing #</button><br />
+<button (click)='saveUsingId("myname")'>SaveUsingId</button>
+
+<!-- <input type="text" name="" id="" [(ngModel)]> -->

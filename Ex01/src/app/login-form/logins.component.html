@@ -1,0 +1,30 @@
+<h1 class="text-primary text-center m-3">Registration Form</h1>
+
+<form action="submit">
+    <div class="row">
+        <div class="col-md-4 container form-group">
+            <input type="text" name="userName" id="userName" (keyup)="checkUserName($event)" [value]="myUserName"
+                #uName class="form-control mb-4" placeholder="username">
+
+            <input type="password" name="userPassword" id="userPassword" (keyup)="checkUserPassword($event)"
+                [value]="myUserPassword" #uPassword class="form-control" placeholder="password">
+
+            <div class="mt-3">
+                <!-- <input type="submit" (click)="validate(userName.value,userPassword.value)" value="Submit"
+                    class="btn btn-block btn-success">
+                <input type="reset" (click)="resetData(userName,userPassword)" value="Reset"
+                    class="btn btn-block btn-info"> -->
+
+                <button type="submit" class="btn btn-block btn-success" (click)="validate(uName.value,uPassword.value)"
+                    [disabled]="disabled">Submit</button>
+                <button class="btn btn-block btn-info" (click)="resetData(uName,uPassword)">Reset</button>
+            </div>
+
+            {{msg}}
+            <!-- <p *ngIf="userName==myUserName">{{userName}}</p>
+            <p *ngIf="userPassword==myUserPassword">{{userPassword}}</p> -->
+            <p></p>
+            {{fieldMsg}}
+        </div>
+    </div>
+</form>
