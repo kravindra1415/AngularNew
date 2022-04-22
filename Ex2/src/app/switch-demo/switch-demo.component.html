@@ -1,0 +1,26 @@
+<p>switch-demo works!</p>
+<h3>iterating over an object containing Array</h3>
+
+<div *ngFor="let obj of peopleByCity">
+
+    <div [ngSwitch]="obj.city">
+        <h2 *ngSwitchCase="'Pune'">{{obj.city}}:MH</h2>
+        <h2 *ngSwitchCase="'Belgaum'">{{obj.city}}:KA</h2>
+        <h2 *ngSwitchCase="'Nagar'">{{obj.city}}:MH</h2>
+        <h2 *ngSwitchDefault>Some other state</h2>
+    </div>
+
+    <table border="2px">
+        <th>Name</th>
+        <th>Age</th>
+        <tr *ngFor="let person of obj.people">
+            <td>{{person.name}}</td>
+            <td>{{person.age}}</td>
+        </tr>
+    </table>
+</div>
+
+<h3>using ng-if: Print all those who are 49 years of age and older</h3>
+<div *ngFor="let person of people">
+    <span *ngIf="person.age>=49">{{person.name+":"+person.age}}</span>
+</div>

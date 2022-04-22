@@ -7,6 +7,8 @@ import { MyChildComponent } from './my-child/my-child.component';
 import { MyParentComponent } from './my-parent/my-parent.component';
 import { StoreComponent } from './store/store.component';
 import { WarehouseComponent } from './warehouse/warehouse.component';
+import { DisplaycomponentComponent } from './displaycomponent/displaycomponent.component';
+import { SwitchDemoComponent } from './switch-demo/switch-demo.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { WarehouseComponent } from './warehouse/warehouse.component';
     MyChildComponent,
     MyParentComponent,
     StoreComponent,
-    WarehouseComponent
+    WarehouseComponent,
+    DisplaycomponentComponent,
+    SwitchDemoComponent
   ],
   imports: [
     BrowserModule

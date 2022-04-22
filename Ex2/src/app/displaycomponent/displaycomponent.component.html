@@ -1,0 +1,14 @@
+<p>displaycomponent works!</p>
+
+<div class="row">
+
+    <table class="col-sm-5 container form-group  bg-light" *ngFor="let obj of objects"> <br>
+
+        <tr></tr> <span *ngFor="let key of getKeys(obj)"> {{key.substring(1)}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {{obj[key]}}
+            <br></span>
+    </table>
+
+</div>
+
+<app-store (newEvent)="change($event)"></app-store>

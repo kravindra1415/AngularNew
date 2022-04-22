@@ -1,3 +1,6 @@
 <p>store works!</p>
 
-<button (click)="someEvent()">Click me</button>
+<input type="text" #Product>
+<input type="number" #unit>
+
+<button (click)="someEvent(Product.value,+unit.value)"> Order </button>
