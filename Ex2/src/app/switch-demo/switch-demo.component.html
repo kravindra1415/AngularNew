@@ -24,3 +24,7 @@
 <div *ngFor="let person of people">
     <span *ngIf="person.age>=49">{{person.name+":"+person.age}}</span>
 </div>
+
+<!-- <p appHighlightDirective [color]="'red'">HELLO</p> -->
+
+<p appHighlightProperties [my-bgColor]="'yellow'" [text-color]="'red'">This is Angular!!!!</p>

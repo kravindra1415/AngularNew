@@ -9,6 +9,7 @@ import { StoreComponent } from './store/store.component';
 import { WarehouseComponent } from './warehouse/warehouse.component';
 import { DisplaycomponentComponent } from './displaycomponent/displaycomponent.component';
 import { SwitchDemoComponent } from './switch-demo/switch-demo.component';
+import { HighlightPropertiesDirective } from './highlight-properties.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SwitchDemoComponent } from './switch-demo/switch-demo.component';
     StoreComponent,
     WarehouseComponent,
     DisplaycomponentComponent,
-    SwitchDemoComponent
+    SwitchDemoComponent,
+    HighlightPropertiesDirective
   ],
   imports: [
     BrowserModule
