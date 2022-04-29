@@ -7,4 +7,39 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'practiceProject';
+
+  userStatus: string = "new";
+  flag = true;
+
+  text!: string;
+
+  showForm: boolean = false;
+
+  showLogin() {
+    this.text = "Login"
+  }
+
+  showRegister() {
+    this.text = "Register"
+  }
+
+  showContact() {
+    this.text = "Contact"
+  }
+
+  showAbout() {
+    this.text = "About"
+  }
+
+  showForms(val: any) {
+    this.text = val;
+  }
+
+
+  toggleLoginAndRegister() {
+    this.flag = !this.flag;
+    this.userStatus = this.flag ? 'old' : 'new';
+  }
 }
+
+

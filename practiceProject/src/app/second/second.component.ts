@@ -9,7 +9,6 @@ export class SecondComponent implements OnInit {
 
   constructor() { }
 
-  @Input()
   value!: string
 
   ngOnInit(): void {

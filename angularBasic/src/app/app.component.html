@@ -1,0 +1,55 @@
+<!-- <app-login></app-login> -->
+<!-- <app-registration></app-registration> -->
+
+<!-- {{getValue()}}<br /><br />
+
+My name is : <input type="text" name="" id="" [value]=name>
+
+<button [disabled]="disabled">Show</button>
+
+Two Way Binding : <input type="text" name="myName" id="" [(ngModel)]="name">{{name}}
+
+Reference Variable: <input type="text" (keyup)="0" #refVar>{{refVar.value}}
+
+Change Event: <input type="text" (change)="0" #refVar1>{{refVar1.value}}
+
+Change Event: <input type="text" (mouseenter)="funMouseEnter()" (mouseout)="funMouseOut()" #refVar2>
+
+<button (click)="buttonClick(refVar2)">Click ME</button> -->
+
+<!-- <div #div>
+  <h1></h1>
+  <h2></h2>
+</div>
+
+<img [src]=changeImg alt="">
+
+<button (click)="changeImgs()">change Img</button> -->
+
+<!-- <button (click)="imgOne(0)">1</button>
+<button (click)="imgOne(1)">2</button>
+<button (click)="imgOne(2)">3</button>
+<button (click)="imgOne(3)">4</button><br /> <br /> -->
+
+
+<!-- <img [src]=changeImg alt="">
+
+<input (keyup)="printVowels(val.value)" type="text" name="" id="" #val> -->
+
+<!-- <button [style]="color" (click)="changeColor()">changecolor</button> -->
+
+<table border="1px">
+  <tr *ngFor="let obj of movies;let i=index;even as isChange" [ngStyle]="{background:isChange?'red':'green'}">
+    <td>{{i}}</td>
+    <td>{{obj.title}}</td>
+    <td>{{obj.director}}</td>
+    <td>{{obj.cast}}</td>
+    <td>{{obj.releaseDate}}</td>
+  </tr>
+</table>
+
+<select name="Movies" (change)="getValues(vals.value)" #vals ngModel>
+  <option [ngValue]="c.cast" *ngFor="let c of movies">{{c.title}}</option>
+</select>
+
+<p>{{values}}</p>

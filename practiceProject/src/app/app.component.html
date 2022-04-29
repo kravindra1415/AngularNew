@@ -1,1 +1,37 @@
-<app-second></app-second>
+<!-- <app-second></app-second> -->
+<!-- <app-component2></app-component2> -->
+
+<!-- <button class="btn btn-primary" (click)="toggleLoginAndRegister()">{{userStatus}}</button> -->
+
+<!-- <app-login *ngIf="userStatus=='old'"></app-login>
+<app-registration *ngIf="userStatus=='new'"></app-registration> -->
+
+<!-- <app-login *ngIf="userStatus=='old' ; else elseBlock"></app-login>
+
+<ng-template #elseBlock>
+    <app-registration></app-registration>
+</ng-template> -->
+
+<!-- <app-switch-component></app-switch-component> -->
+
+<nav class="navbar navbar-light bg-dark">
+    <form class="form-inline">
+        <!-- <button (click)="showLogin()" class="btn btn-outline-success mr-2" type="button">Login</button>
+        <button (click)="showRegister()" class="btn btn-outline-success  mr-2" type="button">Register</button>
+        <button (click)="showContact()" class="btn btn-outline-success  mr-2" type="button">Contact</button>
+        <button (click)="showAbout()" class="btn btn-outline-success  mr-2" type="button">About</button> -->
+        
+        <button (click)="showForms('Login')" class="btn btn-outline-success mr-2" type="button">Login</button>
+        <button (click)="showForms('Register')" class="btn btn-outline-success  mr-2" type="button">Register</button>
+        <button (click)="showForms('Contact')" class="btn btn-outline-success  mr-2" type="button">Contact</button>
+        <button (click)="showForms('About')" class="btn btn-outline-success  mr-2" type="button">About</button>
+
+    </form>
+</nav>
+
+<div [ngSwitch]="text">
+    <app-logins *ngSwitchCase="'Login'"></app-logins>
+    <app-registration *ngSwitchCase="'Register'"></app-registration>
+    <app-contact *ngSwitchCase="'Contact'"></app-contact>
+    <app-about *ngSwitchCase="'About'"></app-about>
+</div>
