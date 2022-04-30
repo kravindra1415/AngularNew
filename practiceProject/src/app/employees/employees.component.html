@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="card col-md-3 m-5 divcolor" *ngFor="let emp of employees">
+        <img class="card-img-top " [src]="emp.empImage">
+        <h2 class="text-center">{{emp.empName}}</h2>
+
+        <h3 class="card-text text-center">{{emp.empDesc}}</h3>
+
+    </div>
+</div>

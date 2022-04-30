@@ -1,5 +1,5 @@
 <div class="container">
-    <form action="">
+    <form action="" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
         <div class="row">
             <div class="col-md-4 offset-4 form-group">
                 <div class="card mt-5" style="border: 1px solid rgb(92, 24, 141);">
@@ -7,16 +7,37 @@
                         <h1 class="text-center text-primary">Login Form</h1>
                     </div>
                     <div class="card-body">
-                        <input type="text" name="" id="" placeholder="enter user name" class="form-control">
-                        <input type="password" name="" id="" placeholder="enter password" class="form-control mt-3">
+                        <input type="text" name="username" id="" pattern="[A-Za-z]{5}" minlength="5"
+                            placeholder="enter user name" class="form-control" #username="ngModel" required ngModel>
+                        <div *ngIf="!username.valid && (username?.dirty || username?.touched)" ngClass="text-danger">
+                            <span  *ngIf="username?.errors?.['required']">field is required</span>
+                            <span  *ngIf="username?.errors?.['minlength']">field is min
+                                length</span><br />
+                            <span class="text-warning" *ngIf="username?.errors?.['pattern']">input value should be in
+                                format</span>
+                        </div>
+
+                        <input type="password" name="password" id="" placeholder="enter password" #password="ngModel"
+                            class="form-control mt-3" required ngModel>
+                        <div *ngIf="!password.valid" && (password?.dirty || password?.touched)>
+                            Something wrong..
+                        </div>
+
                         <div>
-                            <button type="submit" class="btn btn-outline-success btn-block mt-3">Login</button>
+                            <button type="submit" [disabled]="contactForm.valid"
+                                class="btn btn-outline-success btn-block mt-3">Login</button>
                             <button type="reset" class="btn btn-outline-danger btn-block mt-3">Cancel</button>
                             <!-- <button (click)="onClick()">click</button> -->
                         </div>
+                        <!-- {{contactForm.valid}} -->
                     </div>
                 </div>
             </div>
         </div>
     </form>
 </div>
+
+<pre>Touched : {{contactForm.touched}}</pre>
+<pre>Submitted : {{contactForm.submitted}}</pre>
+<pre>username field : {{username.value}}</pre>
+<pre>username field : {{username.touched}}</pre>

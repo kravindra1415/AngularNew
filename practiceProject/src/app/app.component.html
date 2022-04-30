@@ -25,6 +25,7 @@
         <button (click)="showForms('Register')" class="btn btn-outline-success  mr-2" type="button">Register</button>
         <button (click)="showForms('Contact')" class="btn btn-outline-success  mr-2" type="button">Contact</button>
         <button (click)="showForms('About')" class="btn btn-outline-success  mr-2" type="button">About</button>
+        <button (click)="showForms('Employees')" class="btn btn-outline-success  mr-2" type="button">Employees</button>
 
     </form>
 </nav>
@@ -34,4 +35,5 @@
     <app-registration *ngSwitchCase="'Register'"></app-registration>
     <app-contact *ngSwitchCase="'Contact'"></app-contact>
     <app-about *ngSwitchCase="'About'"></app-about>
+    <app-employees *ngSwitchCase="'Employees'"></app-employees>
 </div>

@@ -87,6 +87,9 @@ export class AppComponent {
   getValues(val:string) {
     this.values=val;
   }
+
+
+  toDate=new Date()
 }
 
 export class Movie {

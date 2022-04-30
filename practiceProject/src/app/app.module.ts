@@ -14,6 +14,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { LoginsComponent } from './logins/logins.component';
 import { HomeComponent } from './home/home.component';
+import { EmployeesComponent } from './employees/employees.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { HomeComponent } from './home/home.component';
     AboutComponent,
     LoginsComponent,
     HomeComponent,
+    EmployeesComponent,
   ],
   imports: [
     BrowserModule,

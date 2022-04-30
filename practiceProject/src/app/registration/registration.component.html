@@ -7,8 +7,6 @@
                     <label class="ml-3" for="">Name</label>
                     <input type="text" name="" id="" class="form-control" placeholder="enter your name">
 
-
-
                     <label class="ml-3" for="">email</label>
                     <input type="email" name="" id="" class="form-control " placeholder="enter email">
 
@@ -54,6 +52,11 @@
                 <label class="ml-3 mt-2" for="">pin</label>
                 <input type="email" name="" id="" class="form-control " placeholder="enter company id">
 
+                <label class="m-3" for="state">Select States</label>
+                <select name="" id="" [(ngModel)]="states">
+                    <option value="" *ngFor="let s of states" [ngValue]="s.id">{{s.state}}</option>
+                </select>
+
             </div>
 
             <div class="form-group col-md-4">
@@ -68,6 +71,11 @@
 
                 <label class="ml-3  mt-2" for="">dob</label>
                 <input type="date" name="" id="" class="form-control " placeholder="enter dob">
+
+                <label class="m-3" for="state">Select cities</label>
+                <select name="" id="" [(ngModel)]="cities">
+                    <option value="" *ngFor="let c of cities" [ngValue]="c.id">{{c.city}}</option>
+                </select>
             </div>
         </div>
 
@@ -78,7 +86,6 @@
                     <button type="reset" class="btn btn-outline-danger btn-block mt-3">Cancel</button>
                 </div>
             </div>
-            
         </div>
     </form>
 </div>

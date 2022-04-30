@@ -12,4 +12,9 @@ export class LoginsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit(contactForm:any) {
+    console.log(contactForm.value);
+    console.log(contactForm.value.password)
+  }
+
 }
